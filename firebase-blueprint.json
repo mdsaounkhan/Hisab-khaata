@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "fields": {
+        "transactions": {
+          "type": "array",
+          "description": "List of user income and expense transactions"
+        },
+        "categories": {
+          "type": "object",
+          "description": "Custom income and expense categories"
+        },
+        "initialBalance": {
+          "type": "number",
+          "description": "Initial account opening balance"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name"
+        },
+        "updatedAt": {
+          "type": "timestamp",
+          "description": "Timestamp of last modification"
+        }
+      }
+    },
+    "Announcement": {
+      "collection": "announcements",
+      "fields": {
+        "title": {
+          "type": "string",
+          "description": "Notification or update title"
+        },
+        "message": {
+          "type": "string",
+          "description": "Notification message or details"
+        },
+        "tag": {
+          "type": "string",
+          "description": "Badge or category of notification, e.g., নতুন আপডেট"
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "description": "Timestamp when announcement was posted"
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Email of admin who posted"
+        }
+      }
+    }
+  }
+}

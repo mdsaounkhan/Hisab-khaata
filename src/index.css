@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --card: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text: #f1f5f9;
+  --text-dim: #94a3b8;
+  --primary: #6366f1;
+  --primary-glow: #818cf8;
+  --income: #10b981;
+  --income-soft: rgba(16, 185, 129, 0.15);
+  --expense: #f43f5e;
+  --expense-soft: rgba(244, 63, 94, 0.15);
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at 0% 0%, #1e1b4b 0%, transparent 50%),
+              radial-gradient(circle at 100% 100%, #0c4a6e 0%, transparent 50%),
+              linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Animations */
+@keyframes blink {
+  50% { opacity: 0.4; }
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.animate-menu {
+  animation: menuIn 0.2s ease;
+}
+
+.animate-fade {
+  animation: fadeIn 0.35s ease;
+}
+
+.animate-slide {
+  animation: slideIn 0.3s ease;
+}
+
+input[type="date"], input[type="month"] {
+  color-scheme: dark;
+}
